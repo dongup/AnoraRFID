@@ -1,0 +1,45 @@
+﻿@page "/models"
+
+@using AnoraRFID.WebClient.Data
+@inject WeatherForecastService ForecastService
+
+<h1>Danh mục model</h1>
+
+@if (models == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Tên model</th>
+                <th>Ngày tạo</th>
+                <th>Người tạo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in models)
+            {
+                <tr>
+                    <td>@item.MODEL_ID</td>
+                    <td>@item.MODEL_NAME</td>
+                    <td>@item.CREATED_DATE.ToVNString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@using AnoraRFID.DataAccess.DAL.Entities
+@inject AppDbContext _context 
+@code {
+    private List<ModelEntity> models = new List<ModelEntity>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        models = await _context.MODEL.ToListAsync();
+    }
+}
