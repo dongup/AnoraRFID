@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "Anora.DataService.Protos";
+
+package model;
+
+service Model{
+	rpc Add (ModelRequest) returns (ResponseMessage);
+}
+
+message ModelRequest{
+	string Name = 1;
+}
+
+message CategoryResponse{
+	string Name = 1;
+	int32 ProductCount = 2;
+}
+
+message ResponseMessage{
+	bool IsSuccess = 1;
+	string Message = 2;
+}

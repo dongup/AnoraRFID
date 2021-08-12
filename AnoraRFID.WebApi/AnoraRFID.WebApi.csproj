@@ -5,10 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\**" />
-    <Content Remove="wwwroot\**" />
-    <EmbeddedResource Remove="wwwroot\**" />
-    <None Remove="wwwroot\**" />
+    <Compile Remove="Controllers\wwwroot\**" />
+    <Content Remove="Controllers\wwwroot\**" />
+    <EmbeddedResource Remove="Controllers\wwwroot\**" />
+    <None Remove="Controllers\wwwroot\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,11 +31,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AnoraRFID.DataAccess\AnoraRFID.DataAccess.csproj" />
+    <Folder Include="Controllers\wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <ProjectReference Include="..\AnoraRFID.DataAccess\AnoraRFID.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

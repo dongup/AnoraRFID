@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnoraRFID.DataAccess", "AnoraRFID.DataAccess\AnoraRFID.DataAccess.csproj", "{FA0D6290-22F0-4D2E-89F8-4E12ED59E320}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnoraRFID.WebApi", "AnoraRFID.WebApi\AnoraRFID.WebApi.csproj", "{58883FAE-8B2F-440E-8164-EABA5960EE44}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnoraRFID.WebClient", "AnoraRFID.WebClient\AnoraRFID.WebClient.csproj", "{E24678E0-812A-48CF-8977-92C13F7852B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnoraRFID.DesktopApp", "AnoraRFID.DesktopApp\AnoraRFID.DesktopApp.csproj", "{D210E9B3-80D9-4EFC-AFAE-A04F8308133D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnoraRFID.DataAccess", "AnoraRFID.DataAccess\AnoraRFID.DataAccess.csproj", "{C5A33CDF-64C7-4011-A71E-1EFE1E749BFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnoraRFID.WebAdmin", "AnoraRFID.WebAdmin\AnoraRFID.WebAdmin.csproj", "{DC3668A7-A73F-44BF-9BCA-EC276044DDF6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnoraRFID.DataService", "Anora.DataService\AnoraRFID.DataService.csproj", "{07A19A3C-EA72-4E5C-A5F7-489841869A5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FA0D6290-22F0-4D2E-89F8-4E12ED59E320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA0D6290-22F0-4D2E-89F8-4E12ED59E320}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA0D6290-22F0-4D2E-89F8-4E12ED59E320}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA0D6290-22F0-4D2E-89F8-4E12ED59E320}.Release|Any CPU.Build.0 = Release|Any CPU
 		{58883FAE-8B2F-440E-8164-EABA5960EE44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58883FAE-8B2F-440E-8164-EABA5960EE44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58883FAE-8B2F-440E-8164-EABA5960EE44}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +33,18 @@ Global
 		{D210E9B3-80D9-4EFC-AFAE-A04F8308133D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D210E9B3-80D9-4EFC-AFAE-A04F8308133D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D210E9B3-80D9-4EFC-AFAE-A04F8308133D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5A33CDF-64C7-4011-A71E-1EFE1E749BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A33CDF-64C7-4011-A71E-1EFE1E749BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A33CDF-64C7-4011-A71E-1EFE1E749BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A33CDF-64C7-4011-A71E-1EFE1E749BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC3668A7-A73F-44BF-9BCA-EC276044DDF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC3668A7-A73F-44BF-9BCA-EC276044DDF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC3668A7-A73F-44BF-9BCA-EC276044DDF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC3668A7-A73F-44BF-9BCA-EC276044DDF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07A19A3C-EA72-4E5C-A5F7-489841869A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07A19A3C-EA72-4E5C-A5F7-489841869A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07A19A3C-EA72-4E5C-A5F7-489841869A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07A19A3C-EA72-4E5C-A5F7-489841869A5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

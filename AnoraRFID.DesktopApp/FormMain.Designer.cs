@@ -29,60 +29,68 @@ namespace AnoraRFID.DesktopApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
+            this.tabHome = new System.Windows.Forms.TabControl();
+            this.tabConfig = new System.Windows.Forms.TabPage();
+            this.tabProductIn = new System.Windows.Forms.TabPage();
+            this.tabHome.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabHome
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1042, 615);
-            this.tabControl1.TabIndex = 0;
+            this.tabHome.Controls.Add(this.tabProductIn);
+            this.tabHome.Controls.Add(this.tabConfig);
+            this.tabHome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabHome.ItemSize = new System.Drawing.Size(136, 36);
+            this.tabHome.Location = new System.Drawing.Point(0, 0);
+            this.tabHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabHome.Name = "tabHome";
+            this.tabHome.SelectedIndex = 0;
+            this.tabHome.Size = new System.Drawing.Size(1037, 644);
+            this.tabHome.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabHome.TabIndex = 0;
             // 
-            // tabPage1
+            // tabConfig
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1034, 589);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabConfig.Location = new System.Drawing.Point(4, 40);
+            this.tabConfig.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabConfig.Name = "tabConfig";
+            this.tabConfig.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabConfig.Size = new System.Drawing.Size(1029, 600);
+            this.tabConfig.TabIndex = 0;
+            this.tabConfig.Text = "CONFIG";
+            this.tabConfig.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabProductIn
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(0, 0);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabProductIn.Location = new System.Drawing.Point(4, 40);
+            this.tabProductIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabProductIn.Name = "tabProductIn";
+            this.tabProductIn.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabProductIn.Size = new System.Drawing.Size(1029, 600);
+            this.tabProductIn.TabIndex = 1;
+            this.tabProductIn.Text = "PRODUCT IN";
+            this.tabProductIn.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1042, 615);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(1037, 644);
+            this.Controls.Add(this.tabHome);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormMain";
             this.Text = "FormMain";
-            this.tabControl1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.FormMain_Load);
+            this.tabHome.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabControl tabHome;
+        private System.Windows.Forms.TabPage tabConfig;
+        private System.Windows.Forms.TabPage tabProductIn;
     }
 }

@@ -18,7 +18,6 @@ namespace AnoraRFID.WebApi.Controllers
 
         public DateTime now => DateTime.Now;
 
-        public ResponseModel rspns = new ResponseModel();
         public int CurrentUserId => CurrentUser.Id;
         public UserEntity CurrentUser
         {

@@ -5,50 +5,64 @@ using System.Threading.Tasks;
 
 namespace AnoraRFID.DataAccess.Models
 {
-    public class ResponseModel
+    public class ResponseModel<T>
     {
         public bool IsSucceed { get; set; }
-        public object Result { get; set; } = new object();
+        public T Result { get; set; } 
         public string Message { get; set; }
         public int StatusCode { get; set; } = 200;
         public MyException Exception { get; set; } = new MyException();
 
-        public ResponseModel Succeed(object Result = null)
+        public ResponseModel<T> Succeed(T Result)
         {
             IsSucceed = true;
             this.Result = Result;
             return this;
         }
 
-        public ResponseModel Failed(string msg = "")
+        public ResponseModel<T> Succeed()
+        {
+            IsSucceed = true;
+            return this;
+        }
+
+        public ResponseModel<T> Failed(string msg = "")
         {
             IsSucceed = false;
             Message = msg;
             return this;
         }
 
-        public ResponseModel NotFound()
+        public ResponseModel<T> NotFound()
         {
             Message = "This item does not existed!";
             IsSucceed = false;
             return this;
         }
 
-        public ResponseModel NotFound(string msg)
+        public ResponseModel<T> NotFound(T result)
+        {
+            Message = "This item does not existed!";
+            IsSucceed = false;
+            Result = result;
+            return this;
+        }
+
+        public ResponseModel<T> NotFound(string msg)
         {
             Message = msg;
             IsSucceed = false;
             return this;
         }
 
-        public ResponseModel Forbiden()
+        public ResponseModel<T> Forbiden()
         {
             Message = "Access denied! You do not have permission to access.";
             IsSucceed = false;
             return this;
         }
 
-        public ResponseModel UnAuthorize()
+        public ResponseModel<T> UnAuthorize()
         {
             Message = "Please login first!";
             IsSucceed = false;

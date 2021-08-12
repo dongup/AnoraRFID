@@ -16,5 +16,14 @@ namespace AnoraRFID.DesktopApp
         {
             InitializeComponent();
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            FormProductIn formProductIn = new FormProductIn();
+            formProductIn.TopLevel = false;
+            formProductIn.Dock = DockStyle.Fill;
+            formProductIn.Show();
+            tabProductIn.Controls.Add(formProductIn);
+        }
     }
 }
