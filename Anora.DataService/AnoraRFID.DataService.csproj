@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -19,6 +19,16 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AnoraRFID.DataAccess\AnoraRFID.DataAccess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Libs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Symbol.RFID3.Host">
+      <HintPath>Libs\Symbol.RFID3.Host.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

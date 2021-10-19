@@ -11,7 +11,7 @@ namespace Anora.DataService
     public class Program
     {
         public static void Main(string[] args)
-        {
+        {v
             CreateHostBuilder(args).Build().Run();
         }
 
